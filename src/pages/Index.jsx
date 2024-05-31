@@ -22,8 +22,8 @@ const Index = () => {
         <Text fontSize="lg" textAlign="center">
           Find your perfect companion. Browse through our adorable pets available for adoption.
         </Text>
-        <Button as={Link} to="/pets" colorScheme="teal" size="lg">
-          View Available Pets
+        <Button as={Link} to="/adoption-request" colorScheme="teal" size="lg">
+          Submit Adoption Request
         </Button>
         <VStack spacing={4} width="100%" mb={10}>
           <HStack spacing={4} width="100%">
