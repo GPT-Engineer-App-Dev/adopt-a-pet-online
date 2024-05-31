@@ -1,17 +1,30 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, Heading, Button, SimpleGrid, Box, Image } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+    <Container centerContent maxW="container.xl" py={10}>
+      <VStack spacing={8} width="100%">
+        <Heading as="h1" size="2xl" textAlign="center">
+          Welcome to PetAdopt
+        </Heading>
+        <Text fontSize="lg" textAlign="center">
+          Find your perfect companion. Browse through our adorable pets available for adoption.
+        </Text>
+        <Button as={Link} to="/pets" colorScheme="teal" size="lg">
+          View Available Pets
+        </Button>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10} mt={10} width="100%">
+          <Box boxSize="sm" borderRadius="lg" overflow="hidden">
+            <Image src="/images/dog1.jpg" alt="Dog 1" objectFit="cover" />
+          </Box>
+          <Box boxSize="sm" borderRadius="lg" overflow="hidden">
+            <Image src="/images/cat1.jpg" alt="Cat 1" objectFit="cover" />
+          </Box>
+          <Box boxSize="sm" borderRadius="lg" overflow="hidden">
+            <Image src="/images/dog2.jpg" alt="Dog 2" objectFit="cover" />
+          </Box>
+        </SimpleGrid>
       </VStack>
     </Container>
   );
